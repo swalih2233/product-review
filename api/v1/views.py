@@ -16,7 +16,7 @@ from product.models import Product, Category
 @api_view(["GET"])
 @permission_classes ([AllowAny])
 def product_details(request,id):
-    instance = get_object_or_404(Product, id=id)
+    instance = get_object_or_404(Product, product_id=id)
   
     
     context ={

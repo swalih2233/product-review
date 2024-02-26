@@ -15,7 +15,7 @@ class Category(models.Model):
 class Product(models.Model):
     product_name = models.CharField(max_length=100)
     product_id =models.CharField(max_length=100)
-    category =models.ForeignKey(Category, on_delete=models.CASCADE,null=True, blank=True)
+    category =models.ManyToManyField(Category, blank=True)
     discounted_price = models.DecimalField(max_digits=10, decimal_places=2)
     actual_price = models.DecimalField(max_digits=10, decimal_places=2)
     discount_percentage = models.IntegerField(default=0)

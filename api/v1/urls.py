@@ -7,7 +7,7 @@ app_name = "api"
  
 urlpatterns = [
   
-  path("product_details/<int:id>/", views.product_details),
+  path("product_details/<str:id>/", views.product_details),
 
   path("list_top_rated_products/", views.list_products),
 
